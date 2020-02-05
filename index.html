@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
@@ -11,70 +12,308 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Welcome to My Portfolio</title>
-  </head>
-  <body id="bg-img">
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
+    <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet">
 
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              How To Reach Me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id="home">
+    <title>Welcome to My Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  
+  <body>
+    <!-- Home -->
+    <section id="home">
+      <img src="img/Home Image 2.png" class="homeIMG1">
+      <img src="img/logo.png" class="logIMG">
+      <img src="img/Home Image 1.png" class="homeIMG2">
       <h1 class="lg-heading">
-        Ryan <span class="text-secondary">Foulke</span>
+        DESIGNING FOR GOOD</span>
       </h1>
       <h2 class="sm-heading">
-        Designer, Programmer & Entrepreneur
+        I believe in the power of mission-driven design to turn difficult problems into elegant solutions that inspire positive change.
       </h2>
-      <div class="icons">
-        <a href="resume.pdf" target="_blank">
-          <i class="fas fa-address-card fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100009899611015/">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/ryan-foulke/
-        "
-        >
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/Ryan-Foulke/">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-      </div>
-    </main>
 
-    <script src="js/main.js"></script>
+      <div class="mouse_scroll">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div>
+            <span class="m_scroll_arrows unu"></span>
+            <span class="m_scroll_arrows doi"></span>
+            <span class="m_scroll_arrows trei"></span>
+          </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <script>
+        $(window).scroll(function() {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > $(window).height()-60) {
+              $("#menu").fadeIn(100);
+            } else {
+              $("#menu").fadeOut(100);
+            }
+          });
+        </script> 
+
+        <script>
+          $(window).scroll(function() {
+            console.log($(window).scrollTop());
+            var connect = document.getElementsByClassName("menu-item");
+            console.log(connect);
+            if ($(window).scrollTop() > $(window).height()-60 && $(window).scrollTop() < $(window).height()*3) {
+              connect[2].style.color = "#d94f5c";
+            } else {
+              connect[2].style = "#000000";
+            }
+            if ($(window).scrollTop() > $(window).height()*3 && $(window).scrollTop() < $(window).height()*4) {
+              connect[1].style.color = "#d94f5c";
+            } else {
+              connect[1].style = "#000000";
+            }
+            if ($(window).scrollTop() > $(window).height()*4) {
+              connect[0].style.color = "#d94f5c";
+            } else {
+              connect[0].style = "#000000";
+            }
+            
+          });
+        </script> 
+
+        <div id="menu">
+          <nav>
+              <ul class="menu-bar">
+                <li><a class="menu-item" href="#connect">contact</a></li>
+                <li><a class="menu-item" href="#about">about</a></li>
+                <li><a class="menu-item" href="#work">work</a></li>
+                <li><a class="menu-item" href="#home">home</a></li>
+              </ul>
+            </nav>
+        </div>        
+
+    <!-- Work -->
+    <section id="work">
+        <h1 class="page-title">
+            WORK</span>
+        </h1>   
+        <div class="work-item">
+          <h3 class="box-head">Local Hive</h3>
+          <h2 class="box-description">
+              A social platform intended to help communities in crisis combine resouces and skills to overcome hard times.
+          </h2>   
+          <a href="https://hci.stanford.edu/courses/cs377e/2019/sp/projects/ResQ/" target="_blank">
+            <div class="read-more-hive">Read More</div>
+          </a>
+          <div class="line"></div> 
+          <!-- Side Arrows -->
+          <a  class="arrow left" onclick="plusDivs(-1)"></a>
+          <a class="arrow right" onclick="plusDivs(1)"></a>
+          
+            <!-- imgs  -->
+            <!-- Page1 -->
+            <h3 class="mySlides0" id="img-title-left">Sign Up and Join Your Local Hive</h3>
+            <img class="mySlides1" id="wireframe-left" src="img/signup.gif"> 
+            <h3 class="mySlides2" id="img-title-right">Learn How You Can Make a Difference</h3>
+            <img class="mySlides3" id="wireframe-right" src="img/introduciton.gif">
+            <!-- Page2 -->
+            <h3 class="mySlides0" id="img-title-left">Join a Project in Your Area</h3>
+            <img class="mySlides1" id="wireframe-left" src="img/join_project.gif"> 
+            <h3 class="mySlides2" id="img-title-right">Create a Project and Recruit Volunteers</h3>
+            <img class="mySlides3" id="wireframe-right" src="img/create_project.gif"> 
+            <!-- Page3 -->
+            <h3 class="mySlides0" id="img-title-left">View Your Community Progress</h3>
+            <img class="mySlides1" id="wireframe-left" src="img/community.gif"> 
+            <h3 class="mySlides2" id="img-title-right">Buzz Members to Keep Your Community Active</h3>
+            <img class="mySlides3" id="wireframe-right" src="img/buzz.gif"> 
+            <!-- Dots -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+
+            <!-- Slideshow -->
+            <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
+              
+              function plusDivs(n) {
+                showDivs(slideIndex += n);
+              }
+              
+              function showDivs(n) {
+                var i;
+
+                var w = document.getElementsByClassName("mySlides0");
+                var x = document.getElementsByClassName("mySlides1");
+                var y = document.getElementsByClassName("mySlides2");
+                var z = document.getElementsByClassName("mySlides3");
+                var dot = document.getElementsByClassName("dot");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                  w[i].style.display = "none";
+                  x[i].style.display = "none";  
+                  y[i].style.display = "none";  
+                  z[i].style.display = "none";  
+                  dot[i].style.backgroundColor = "grey";  
+                }
+                w[slideIndex-1].style.display = "block";  
+                x[slideIndex-1].style.display = "block";  
+                y[slideIndex-1].style.display = "block";  
+                z[slideIndex-1].style.display = "block";  
+                dot[slideIndex-1].style.backgroundColor = "black";  
+              }
+
+              </script>
+
+        </div> 
+        <div class="work-item">
+            <h3 class="box-head">Apfyt</h3>
+            <h2 class="box-description">
+                A Stanford startup bringing smart transactions to brick and mortar merchants.
+            </h2>   
+            <a href="Apfyt_deck.pdf" target="_blank">
+              <div class="read-more-Apfyt">Read More</div>
+            </a>
+            <div class="line"></div>   
+
+            <!-- Side Arrows -->
+            <a class="arrow left Apfyt" onclick="plusDivsApfyt(-1)"></a>
+            <a class="arrow right Apfyt" onclick="plusDivsApfyt(1)"></a>
+            <!-- imgs  -->
+            <!-- Page1 -->
+            <h3 class="mySlidesApfyt0" id="img-title-left">Easily Connecting Customers to Deals</h3>
+            <img class="mySlidesApfyt1" id="Apfyt-wireframe-left" src="img/dealoftheday.png"> 
+            <h3 class="mySlidesApfyt2" id="img-title-right">A One Stop Shop for All Merchants</h3>
+            <img class="mySlidesApfyt3" id="Apfyt-wireframe-right" src="img/main.png">
+            <!-- Page2 -->
+            <h3 class="mySlidesApfyt0" id="img-title-center">The Digital Bridge Between Communities and Merchants</h3>
+            <img class="mySlidesApfyt1" id="Apfyt-Process" src="img/Apfyt_Process.png"> 
+            <h3 class="mySlidesApfyt2" id="img-title-right"></h3>
+            <img class="mySlidesApfyt3" id="wireframe-right" src=""> 
+            <!-- Page3 -->
+            <h3 class="mySlidesApfyt0" id="img-title-center">Why Apfyt?</h3>
+            <img class="mySlidesApfyt1" id="Apfyt_Icon-left" src="img/Apfyt_Icon_1.png"> 
+            <h3 class="mySlidesApfyt2" id="img-title-right"></h3>
+            <img class="mySlidesApfyt3" id="Apfyt_Icon-right" src="img/Apfyt_Icon_2.png"> 
+            <!-- Dots -->
+            <span class="dotApfyt"></span>
+            <span class="dotApfyt"></span>
+            <span class="dotApfyt"></span>
+          </div> 
+          <script>
+              var slideIndexApfyt = 1;
+              showDivsApfyt(slideIndexApfyt);
+              
+              function plusDivsApfyt(n) {
+                showDivsApfyt(slideIndexApfyt += n);
+              }
+              
+              function showDivsApfyt(n) {
+                var iApfyt;
+                var wApfyt = document.getElementsByClassName("mySlidesApfyt0");
+                var xApfyt = document.getElementsByClassName("mySlidesApfyt1");
+                var yApfyt = document.getElementsByClassName("mySlidesApfyt2");
+                var zApfyt = document.getElementsByClassName("mySlidesApfyt3");
+                var dotApfyt = document.getElementsByClassName("dotApfyt");
+                if (n > xApfyt.length) {slideIndexApfyt = 1}
+                if (n < 1) {slideIndexApfyt = xApfyt.length}
+                for (iApfyt = 0; iApfyt < xApfyt.length; iApfyt++) {
+                  wApfyt[iApfyt].style.display = "none";
+                  xApfyt[iApfyt].style.display = "none";  
+                  yApfyt[iApfyt].style.display = "none";  
+                  zApfyt[iApfyt].style.display = "none"; 
+                  dotApfyt[iApfyt].style.backgroundColor = "grey";    
+                }
+                wApfyt[slideIndexApfyt-1].style.display = "block";  
+                xApfyt[slideIndexApfyt-1].style.display = "block";  
+                yApfyt[slideIndexApfyt-1].style.display = "block";  
+                zApfyt[slideIndexApfyt-1].style.display = "block";  
+                dotApfyt[slideIndexApfyt-1].style.backgroundColor = "black"; 
+              }
+              </script>
+
+    </section>
+    
+    <!-- About -->
+    <section id="about">
+      <h1 class="page-title">
+          ABOUT</span>
+      </h1>  
+      <div class="about-item">
+        <img src="img/portrait_small.png" class="portrait"> 
+        <h3 class="box-head">Hi I'm Ryan &#128075;</h3>
+        <h2 class="box-description">
+            I believe that there are a lot of problems out there that just need someone to reach out a helping hand. I apply methods of design thinking in order to reach out that hand.
+            <p></p>
+            I strive to empathize with people on a deep level so that I can understand their needs and design a solution. 
+        </h2> 
+        <h3 class="box-head">A Bit About My Past</h3>
+        <h2 class="box-description">
+            When I was a kid me and two of my friends discovered a deep passion for random acts of kindness. We noticed that we were always at our happiest point when we were making others happy, even if it was something small. So we started leaving little notes for people, helping them carry groceries to their car in the snow, giving people flowers. Nothing big but little things. Looking back this taught me so much about what it means to be a designer. It taught me what I call the “reverse midset”. When you completely change your mindset from what you are trying to achieve what someone else is trying to achieve. 
+        </h2>  
+        <h3 class="box-head">Random Things That Make Me Happy</h3>
+        <h2 class="box-description">
+            Poke, Spikeball, Thanksgiving, Drawing, Family
+        </h2>   
+    </section>
+
+    <!-- Connect -->
+    <section id="connect">
+      <h1 class="page-title">
+          LET'S CONNECT</span>
+      </h1>  
+      <!-- Media Buttons -->
+      <div class="first-row">
+      <style>
+          </style>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100009899611015" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <span> - Facebook</span>
+              </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/ryan_foulke/" target="_blank">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span> - Instagram</span>
+                </a>
+              </li>
+            <li>
+              <a href="https://twitter.com/?lang=en" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <span> - Twitter</span>
+              </a>
+            </li>
+        </div>
+        <div class="second-row">
+          <style>
+              </style>
+              <ul>
+                <li>
+                  <a href="https://www.linkedin.com/in/ryan-foulke/" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <span> - LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@ryanfoulke1" target="_blank">
+                      <i class="fab fa-medium-m" aria-hidden="true"></i>
+                      <span> - Medium</span>
+                    </a>
+                  </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span> - Email</span>
+                  </a>
+                </li>
+            </div>
+    </section> 
   </body>
 </html>
